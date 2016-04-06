@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Comain\Domain.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{EEF476C5-D8BD-4D27-B071-6407C6747D5F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.Tests.Acceptance", "Service.Tests.Acceptance\Service.Tests.Acceptance.csproj", "{A0B438BC-CA4A-4A2E-9825-06DD996C8E67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{EEF476C5-D8BD-4D27-B071-6407C6747D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEF476C5-D8BD-4D27-B071-6407C6747D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEF476C5-D8BD-4D27-B071-6407C6747D5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0B438BC-CA4A-4A2E-9825-06DD996C8E67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0B438BC-CA4A-4A2E-9825-06DD996C8E67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0B438BC-CA4A-4A2E-9825-06DD996C8E67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0B438BC-CA4A-4A2E-9825-06DD996C8E67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

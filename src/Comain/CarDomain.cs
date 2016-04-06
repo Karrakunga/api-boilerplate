@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace api.boilerplate.Domain
 {
-    public class Car
+    public class CarDomain
     {
         public Guid CarId { get; set; }
 

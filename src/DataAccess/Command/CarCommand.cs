@@ -5,7 +5,7 @@ namespace api.boilerplate.DataAccess.Command
 {
     public class CarCommand
     {
-        public Guid AddToDatabase(Car car)
+        public Guid AddToDatabase(CarDomain car)
         {
             car.CarId = Guid.NewGuid();
 

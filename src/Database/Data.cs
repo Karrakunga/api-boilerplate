@@ -5,6 +5,6 @@ namespace api.boilerplate.Database
 {
     public class Data
     {
-        public static List<Car> CarData = new List<Car>();
+        public static List<CarDomain> CarData = new List<CarDomain>();
     }
 }

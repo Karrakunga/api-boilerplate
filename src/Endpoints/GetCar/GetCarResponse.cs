@@ -5,6 +5,6 @@ namespace api.boilerplate.Endpoints.GetCar
 {
     public class GetCarResponse
     {
-        public IEnumerable<Car> Cars { get; set; }
+        public IEnumerable<CarDomain> Cars { get; set; }
     }
 }
