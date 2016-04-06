@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading;
 using api.boilerplate.Database;
 using Service.Tests.Acceptance.Models;
 using TechTalk.SpecFlow;
 using api.boilerplate.Domain;
+using NUnit.Framework;
 
 
 namespace Service.Tests.Acceptance.Steps
 {
     [Binding]
+    [Scope(Feature = "ValidateCar")]
     public class ValidateCarSteps
     {
+        private Guid _carId;
+
         [Given(@"the following car data")]
         public void GivenTheFollowingCarData(IEnumerable<CarModel> cars)
         {
@@ -27,25 +30,19 @@ namespace Service.Tests.Acceptance.Steps
                     YearBought = car.YearBought
                     
                 });
+
+                _carId = car.CarId;
+                ScenarioContext.Current.Add("CarGuid", _carId);
             }
         }
         
-        [When(@"the endpoint is called")]
-        public void WhenTheEndpointIsCalled()
+        [Then(@"our data list should contain (.*) car")]
+        public void ThenOurDataListShouldContainCar(int carCount)
         {
-            ScenarioContext.Current.Pending();
+            Assert.That(Data.CarData.Count, Is.EqualTo(carCount));
         }
-        
-        [Then(@"the following data should be returned")]
-        public void ThenTheFollowingDataShouldBeReturned()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Then(@"the api will return a response of Ok")]
-        public void ThenTheApiWillReturnAResponseOfOk()
-        {
-            ScenarioContext.Current.Pending();
-        }
+
+
+
     }
 }

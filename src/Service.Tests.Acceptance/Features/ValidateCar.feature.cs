@@ -64,13 +64,9 @@ namespace Service.Tests.Acceptance.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Given a car endpoint when that endpoint is called a list of cars is returned")]
-        public virtual void GivenACarEndpointWhenThatEndpointIsCalledAListOfCarsIsReturned()
+        public virtual void FeatureBackground()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Given a car endpoint when that endpoint is called a list of cars is returned", ((string[])(null)));
 #line 6
-this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Car Type",
@@ -82,12 +78,20 @@ this.ScenarioSetup(scenarioInfo);
                         "2015"});
 #line 7
  testRunner.Given("the following car data", ((string)(null)), table1, "Given ");
-#line 10
- testRunner.When("the endpoint is called", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Given a car data list containing cars")]
+        public virtual void GivenACarDataListContainingCars()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Given a car data list containing cars", ((string[])(null)));
 #line 11
- testRunner.Then("the following data should be returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
 #line 12
- testRunner.And("the api will return a response of Ok", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("our data list should contain 1 car", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
